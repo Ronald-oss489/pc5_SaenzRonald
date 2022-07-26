@@ -19,7 +19,4 @@ jobs:
 
       - name: Deploy
         run: python freeze.py
-        with:
-          personal_token: ${{ secrets.RONALD_USERNAME }}
-          github_token: ${{ secrets.RONALD_PASSWORD }}
           
