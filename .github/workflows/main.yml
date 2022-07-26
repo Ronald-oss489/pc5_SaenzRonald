@@ -17,7 +17,7 @@ jobs:
 
       - run: pip install Frozen-Flask
       - run: python freeze.py
-      - run: python app.py
+      
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
