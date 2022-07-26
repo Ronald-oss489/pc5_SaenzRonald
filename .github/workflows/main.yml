@@ -20,7 +20,6 @@ jobs:
       
 
       - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
         with:
           personal_token: ${{ secrets.RONALD_USERNAME }}
           github_token: ${{ secrets.RONALD_PASSWORD }}
