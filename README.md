@@ -1,3 +1,2 @@
 # Infraestructura
 
-Ronald Saenz
