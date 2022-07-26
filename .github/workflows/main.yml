@@ -1,0 +1,24 @@
+name: GitHub Pages
+
+on:
+  push:
+    branches:
+      - develop # Set a branch name to trigger deployment
+  pull_request:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-20.04
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: archivo freeze para build
+        run: python freeze.py
+
+        with:
+          personal_token: ${{ secrets.RONALD_USERNAME }}
+          github_token: ${{ secrets.RONALD_PASSWORD }}
+          
