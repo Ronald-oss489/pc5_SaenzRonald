@@ -15,11 +15,10 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - run: pip install Frozen-Flask
-      - run: python freeze.py
-      
+      - run: pip install Frozen-Flask       
 
       - name: Deploy
+        run: python freeze.py
         with:
           personal_token: ${{ secrets.RONALD_USERNAME }}
           github_token: ${{ secrets.RONALD_PASSWORD }}
