@@ -18,6 +18,10 @@ jobs:
       - name: archivo freeze para build
         run: python freeze.py
 
+      
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        if: ${{ github.ref == 'refs/heads/develop' }}
         with:
           personal_token: ${{ secrets.RONALD_USERNAME }}
           github_token: ${{ secrets.RONALD_PASSWORD }}
